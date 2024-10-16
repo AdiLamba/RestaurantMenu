@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.header{
+    background-color: mediumspringgreen;
+    text-align: center;
+    color: darkgoldenrod;
+}
+
+.footer{
+    background-color: mediumspringgreen;
+    text-align: center;
+    color: darkgoldenrod;
+}
+
+.resName{
+    text-align: center;
+    color: darkgoldenrod;
+    font-weight: bold;
+}
+
+.addr{
+    text-align: center;
+    color: darkgoldenrod;
+    font-weight: bold;
+}
+
+.contact{
+    text-align: center;
+    color: darkgoldenrod;
+    font-weight: bold;
+}

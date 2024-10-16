@@ -1,0 +1,15 @@
+<mat-form-field>
+    <mat-label>Select a section</mat-label>
+    <mat-select [(value)]="section" (selectionChange)="selectSection(section)">
+        <mat-option value="Breakfast">Breakfast</mat-option>
+        <mat-option value="Beef">Beef</mat-option>
+        <mat-option value="Chicken">Chicken</mat-option>
+        <mat-option value="Sides">Sides</mat-option>
+        <mat-option value="Beverages">Beverages</mat-option>
+    </mat-select>
+</mat-form-field>
+<mat-list>
+    <mat-list-item *ngFor="let x of chosenSection">
+    Name: {{x.name}} || Calories: {{x.calories}} || Price: {{x.price}}
+    </mat-list-item>
+</mat-list>

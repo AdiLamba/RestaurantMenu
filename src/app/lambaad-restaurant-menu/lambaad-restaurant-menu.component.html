@@ -1,0 +1,24 @@
+<div class="resName">{{sharedResturantInfo991702428.name}}</div>
+<div class="addr">Address: {{sharedResturantInfo991702428.address}}, {{sharedResturantInfo991702428.province}}, {{sharedResturantInfo991702428.postalCode}}, {{sharedResturantInfo991702428.country}}</div>
+<div class="contact">Contact Number: {{sharedResturantInfo991702428.contactNumber}}</div>
+<table mat-table [dataSource]="sharedRestaurantMenu991702428">
+    <tr mat-header-row *matHeaderRowDef="['name', 'calories', 'price', 'section']"></tr>
+    <tr mat-row *matRowDef="let row;
+                            columns:['name', 'calories', 'price', 'section']"></tr>
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let row">{{row.name}}</td>
+    </ng-container>
+    <ng-container matColumnDef="calories">
+        <th mat-header-cell *matHeaderCellDef>Calories (in Cals)</th>
+        <td mat-cell *matCellDef="let row">{{row.calories}}</td>
+    </ng-container>
+    <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef>Price</th>
+        <td mat-cell *matCellDef="let row">{{row.price | currency: 'CAD'}}</td>
+    </ng-container>
+    <ng-container matColumnDef="section">
+        <th mat-header-cell *matHeaderCellDef>Section</th>
+        <td mat-cell *matCellDef="let row">{{row.section}}</td>
+    </ng-container>
+</table>
